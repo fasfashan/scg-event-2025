@@ -6,7 +6,7 @@ import Layout from "../layout";
 function Dashboard() {
   return (
     <Layout>
-      <div className="w-full max-w-md mx-auto">
+      <div className="w-full max-w-md">
         <div className="mt-10">
           <ActivityTabs />
           <PointsInfo />
