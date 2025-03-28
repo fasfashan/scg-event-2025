@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { user } from "../data/user";
-
+import { useNavigate } from "react-router-dom";
 function PhoneVerification({ onClose, company }) {
+  const navigate = useNavigate();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState("");
 
@@ -16,7 +17,7 @@ function PhoneVerification({ onClose, company }) {
       // Bandingkan nomor telepon yang diinput dengan nomor yang tersimpan
       if (phoneNumber.trim() === companyData.phoneNumber) {
         // Nomor telepon valid
-        window.location.href = "dashboard.html";
+        navigate("/dashboard");
       } else {
         // Nomor telepon tidak sesuai
         setError("Nomor telepon tidak sesuai dengan data perusahaan");
