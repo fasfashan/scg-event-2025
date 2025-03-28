@@ -3,7 +3,7 @@ import Leaderboard from "../components/Leaderboard";
 import ActivityTabs from "../components/ActivityTabs";
 import PointsInfo from "../components/PointsInfo";
 import Layout from "../layout";
-function Dashboard() {
+export default function Dashboard() {
   return (
     <Layout>
       <div className="w-full max-w-md">
@@ -16,5 +16,3 @@ function Dashboard() {
     </Layout>
   );
 }
-
-export default Dashboard;
