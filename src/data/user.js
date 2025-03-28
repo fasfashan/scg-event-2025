@@ -6,10 +6,8 @@ export const user = [
     representatives: 4,
     boothNumber: "A12",
     phoneNumber: "123-456-7890",
-    points: {
-      quiz: 90,
-      survey: 180,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 2,
@@ -18,10 +16,8 @@ export const user = [
     representatives: 3,
     boothNumber: "B05",
     phoneNumber: "234-567-8901",
-    points: {
-      quiz: 85,
-      survey: 170,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 3,
@@ -30,10 +26,8 @@ export const user = [
     representatives: 5,
     boothNumber: "C18",
     phoneNumber: "345-678-9012",
-    points: {
-      quiz: 80,
-      survey: 160,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 4,
@@ -42,10 +36,8 @@ export const user = [
     representatives: 2,
     boothNumber: "D22",
     phoneNumber: "456-789-0123",
-    points: {
-      quiz: 75,
-      survey: 150,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 5,
@@ -54,10 +46,8 @@ export const user = [
     representatives: 6,
     boothNumber: "A08",
     phoneNumber: "567-890-1234",
-    points: {
-      quiz: 70,
-      survey: 140,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 6,
@@ -66,10 +56,8 @@ export const user = [
     representatives: 4,
     boothNumber: "B17",
     phoneNumber: "678-901-2345",
-    points: {
-      quiz: 65,
-      survey: 130,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 7,
@@ -78,10 +66,8 @@ export const user = [
     representatives: 3,
     boothNumber: "C09",
     phoneNumber: "789-012-3456",
-    points: {
-      quiz: 60,
-      survey: 120,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
   {
     id: 8,
@@ -90,9 +76,7 @@ export const user = [
     representatives: 5,
     boothNumber: "D15",
     phoneNumber: "890-123-4567",
-    points: {
-      quiz: 100,
-      survey: 200,
-    },
+    quizPoints: 100,
+    surveyPoints: 200,
   },
 ];
