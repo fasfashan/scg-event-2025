@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../layout";
 import Navigation from "../components/Navigation";
-import BoothList from "../components/Boothlist";
+import BoothList from "../components/BoothList";
 import Rundown from "../components/Rundown";
 
 export default function Dashboard() {
