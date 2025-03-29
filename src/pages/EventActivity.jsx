@@ -8,11 +8,9 @@ export default function Dashboard() {
   return (
     <Layout>
       <div className="w-full max-w-md">
-        <div className="mt-10">
-          <Navigation />
-          <BoothList />
-          <Rundown />
-        </div>
+        <Navigation />
+        <BoothList />
+        <Rundown />
       </div>
     </Layout>
   );

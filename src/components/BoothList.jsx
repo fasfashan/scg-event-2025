@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { booth } from "../data/booth"; // Pastikan booth.js di-import
-
+import { useNavigate } from "react-router-dom";
 export default function BoothList() {
+  const navigate = useNavigate();
   const [selectedBooth, setSelectedBooth] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [error, setError] = useState("");
   const [otp, setOtp] = useState(["", "", "", ""]);
   const inputRefs = useRef([]);
 
@@ -38,11 +40,9 @@ export default function BoothList() {
   const handleSubmit = () => {
     const enteredCode = otp.join(""); // Gabungkan input jadi string
     if (enteredCode === selectedBooth.code.toString()) {
-      alert("Kode benar! Lanjut ke halaman berikutnya.");
-      closePopup();
-      // Arahkan ke halaman lain di sini
+      navigate(`/dashboard/event-activity/booth/${selectedBooth.id}`); // Arahkan ke halaman booth
     } else {
-      alert("Kode salah! Silakan coba lagi.");
+      setError("Kode salah");
     }
   };
 
@@ -89,6 +89,7 @@ export default function BoothList() {
               Kode yang benar:{" "}
               <span className="font-bold">{selectedBooth.code}</span>
             </p>
+            {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
             <button
               onClick={handleSubmit}
               disabled={otp.includes("")}
