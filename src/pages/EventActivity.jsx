@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layout";
 import Navigation from "../components/Navigation";
-import BoothSection from "../components/BoothSection";
 import BoothList from "../components/Boothlist";
 import Rundown from "../components/Rundown";
 
