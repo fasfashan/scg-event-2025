@@ -42,7 +42,7 @@ function Login() {
       <h1 className="text-sm font-medium text-center mb-6">
         Masukkan nama perusahaan Anda
       </h1>
-      <Link to="/dashboard">Test</Link>
+
       <form onSubmit={handleSearch}>
         <div className="mb-4 flex items-center gap-2">
           <input

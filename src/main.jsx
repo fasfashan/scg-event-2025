@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/dashboard";
 import EventActivity from "./pages/EventActivity";
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/dashboard/eventactivity",
+    path: "/dashboard/event-activity",
     element: <EventActivity />,
   },
 ]);
