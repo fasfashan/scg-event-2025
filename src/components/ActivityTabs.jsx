@@ -13,10 +13,13 @@ export default function ActivityTabs() {
             <Users className="h-8 w-8 text-green-500 mb-2" />
             <span className="text-center font-medium">Event Activity</span>
           </Link>
-          <button className="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-100 transition-colors">
+          <Link
+            to="/dashboard/survey"
+            className="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-100 transition-colors"
+          >
             <ClipboardList className="h-8 w-8 text-green-500 mb-2" />
             <span className="text-center font-medium">Survey</span>
-          </button>
+          </Link>
         </div>
       </div>
     </>

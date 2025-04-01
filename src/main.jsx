@@ -7,6 +7,7 @@ import EventActivity from "./pages/EventActivity";
 import Booth from "./pages/Booth";
 import Quiz from "./pages/Quiz";
 import Leaderboard from "./pages/Leaderboard";
+import Survey from "./pages/Survey";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/leaderboard",
     element: <Leaderboard />,
+  },
+  {
+    path: "/dashboard/survey",
+    element: <Survey />,
   },
 ]);
 
