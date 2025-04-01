@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import EventActivity from "./pages/EventActivity";
 import Booth from "./pages/Booth";
 import Quiz from "./pages/Quiz";
+import Leaderboard from "./pages/Leaderboard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/event-activity/booth/:id/quiz",
     element: <Quiz />,
+  },
+  {
+    path: "/leaderboard",
+    element: <Leaderboard />,
   },
 ]);
 
