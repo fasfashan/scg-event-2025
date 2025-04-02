@@ -7,7 +7,7 @@ const QuizResult = ({ score, totalQuestions, answers }) => {
   const navigate = useNavigate();
 
   const handleBackToHome = () => {
-    navigate("/dashboard");
+    navigate("/dashboard/event-activity");
   };
 
   // Hitung total poin dari answers (sebagai backup)

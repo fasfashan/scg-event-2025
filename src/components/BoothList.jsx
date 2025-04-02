@@ -58,11 +58,18 @@ export default function BoothList() {
         {booth.map((booth) => (
           <button
             key={booth.id}
-            className="p-4 w-fit hover:bg-gray-100 transition-all cursor-pointer bg-gray-50 mt-4 gap-2 flex flex-col items-center border border-neutral-300 rounded-lg"
+            className={`p-4 w-full transition-all mt-4 gap-2 flex flex-col items-center border border-neutral-300 rounded-lg ${
+              booth.id === 2
+                ? "bg-gray-200 opacity-50 cursor-not-allowed"
+                : "bg-gray-50 hover:bg-gray-100 cursor-pointer"
+            }`}
             onClick={() => openPopup(booth)}
+            disabled={booth.id === 2}
           >
             <img src="/booth-icon.svg" alt="Booth Icon" />
-            <p className="font-medium text-sm">Booth {booth.id}</p>
+            <p className="font-semibold text-xs">
+              {booth.name} {booth.id === 2 && "(sudah dikunjungi)"}
+            </p>
           </button>
         ))}
       </div>
