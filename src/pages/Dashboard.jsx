@@ -11,7 +11,7 @@ export default function Dashboard() {
         <div className="mt-10">
           <div className="bg-white rounded-lg p-4 border border-neutral-300 mb-4">
             <h1 className="text-xl font-bold text-center mb-2">
-              Selamat Datang di Special Customer Gethering
+              Selamat Datang <br /> Special Customer Gathering
             </h1>{" "}
             <p className="text-center text-neutral-500">
               Tukarkan point Anda dengan hadiah menarik untuk 10 orang pemenang
