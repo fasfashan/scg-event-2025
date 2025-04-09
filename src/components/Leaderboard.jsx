@@ -11,9 +11,8 @@ export default function Leaderboard() {
     <>
       <div className="bg-white rounded-lg p-4 mt-4 border border-neutral-300">
         <div className="flex items-center justify-center mb-4">
-          <Award className="h-6 w-6 text-yellow-500 mr-2" />
           <h2 className="text-lg font-bold text-center">
-            10 Customer Tercepat
+            Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering
           </h2>
         </div>
 
