@@ -42,8 +42,14 @@ export default function Leaderboard() {
               {user.map((item) => (
                 <tr
                   key={item.id}
-                  className={`text-lg rounded-lg ${
-                    [1, 2, 3].includes(item.id) ? "bg-red-100" : "bg-white"
+                  className={` ${
+                    item.id === 1
+                      ? "bg-red-100 font-bold"
+                      : item.id === 2
+                      ? "bg-blue-100 font-semibold"
+                      : item.id === 3
+                      ? "bg-orange-100 font-medium"
+                      : ""
                   }`}
                 >
                   <td className="py-3 px-1">

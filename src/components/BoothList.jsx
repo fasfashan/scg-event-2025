@@ -93,8 +93,8 @@ export default function BoothList() {
               ))}
             </div>
             <p className="text-sm text-gray-500 mb-2">
-              Kode yang benar:{" "}
-              <span className="font-bold">{selectedBooth.code}</span>
+              Dapatkan kode untuk membuka kuis ini di Booth
+              <span className="font-bold"> {selectedBooth.name}</span>
             </p>
             {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
             <button

@@ -9,11 +9,11 @@ export default function Leaderboard() {
   };
   return (
     <>
-      <div className="bg-white rounded-lg p-4 border border-neutral-300">
+      <div className="bg-white rounded-lg p-4 mt-4 border border-neutral-300">
         <div className="flex items-center justify-center mb-4">
           <Award className="h-6 w-6 text-yellow-500 mr-2" />
           <h2 className="text-lg font-bold text-center">
-            10 most active participant winner
+            10 Customer Tercepat
           </h2>
         </div>
 
@@ -32,8 +32,14 @@ export default function Leaderboard() {
               {user.map((item) => (
                 <tr
                   key={item.id}
-                  className={`text-xs  ${
-                    [1, 2, 3].includes(item.id) ? "bg-red-50" : ""
+                  className={` text-xs ${
+                    item.id === 1
+                      ? "bg-red-100 font-bold"
+                      : item.id === 2
+                      ? "bg-blue-100 font-semibold"
+                      : item.id === 3
+                      ? "bg-orange-100 font-medium"
+                      : ""
                   }`}
                 >
                   <td className="py-2 px-1">

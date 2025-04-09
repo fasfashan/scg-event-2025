@@ -86,7 +86,7 @@ const QuizResult = ({ score, totalQuestions, answers }) => {
           onClick={handleBackToHome}
           className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
         >
-          Kembali ke home
+          Kembali ke Halaman Utama
         </button>
       </div>
     </Layout>

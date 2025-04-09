@@ -17,7 +17,7 @@ export default function PointsInfo() {
             <div className="flex items-center w-full justify-between">
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 " />
-                <span>Kuis Point </span>
+                <span>Kuis Booth Point</span>
               </div>
               <span>{user[0].quizPoints}</span>
             </div>

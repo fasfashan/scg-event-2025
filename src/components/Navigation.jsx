@@ -9,7 +9,7 @@ export default function Navigation() {
         <Link to="/dashboard">
           <div className="flex text-sm font-medium gap-2 items-center">
             <ArrowLeft width={20} height={20} color="black" />
-            <p>Back to Home</p>
+            <p>Kembali ke Halaman Utama</p>
           </div>
         </Link>
         <span className="text-sm font-medium">

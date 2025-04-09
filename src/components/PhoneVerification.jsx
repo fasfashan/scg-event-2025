@@ -32,9 +32,8 @@ function PhoneVerification({ onClose, company }) {
       <div className="bg-white rounded-lg shadow-xl max-w-sm p-6">
         <h2 className="text-xl font-bold mb-4">Verifikasi nomor Anda</h2>
         <p className="text-sm text-gray-600 mb-6">
-          Silakan masukkan nomor telepon yang terkait dengan{" "}
-          <span className="font-medium text-black">{company.name} </span>
-          untuk memverifikasi identitas Anda
+          Silahkan masukan nomer telfon terdaftar di Aplikasi Sahabat untuk
+          memverifikasi identitas Anda
         </p>
 
         <form onSubmit={handleVerify}>

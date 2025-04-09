@@ -60,13 +60,11 @@ const Survey = () => {
             <div className="bg-green-700 text-white py-2 px-4 rounded-full inline-block mb-4">
               +200 Points!
             </div>
-            <h2 className="text-lg font-semibold">
-              Terima Kasih Atas Masukan Anda!
+            <h2 className="text-lg mb-4 font-semibold">
+              Terimakasih atas masukan Anda, kami akan menggunakannya untuk
+              meningkatkan acara mendatang
             </h2>
-            <p className="text-gray-500 mb-4">
-              Respon Anda telah dicatat. Kami menghargai masukan Anda dan akan
-              menggunakannya untuk meningkatkan acara mendatang.
-            </p>
+
             <Link
               to="/dashboard"
               className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"

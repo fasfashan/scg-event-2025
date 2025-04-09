@@ -12,9 +12,14 @@ const QuizPage = () => {
   const boothData = booth.find((b) => b.id === boothId);
   const questions = boothData?.quiz || [];
 
+  // Konstanta untuk pengaturan waktu
+  const TOTAL_TIME = 20; // Total waktu untuk menjawab (detik)
+  const GRACE_PERIOD = 5; // Periode awal tanpa pengurangan poin (detik)
+  const MAX_POINTS = 20; // Poin maksimal
+
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswer, setSelectedAnswer] = React.useState(null);
-  const [timeLeft, setTimeLeft] = React.useState(20);
+  const [timeLeft, setTimeLeft] = React.useState(TOTAL_TIME);
   const [score, setScore] = React.useState(0);
   const [answers, setAnswers] = React.useState([]);
   const [showResult, setShowResult] = React.useState(false);
@@ -22,7 +27,12 @@ const QuizPage = () => {
   const handleNextQuestion = (isTimeout = false) => {
     const isCorrect =
       !isTimeout && selectedAnswer === questions[currentQuestion]?.answer;
-    const timeBonus = isTimeout ? 0 : 20 - timeLeft;
+
+    // Perhitungan poin dengan grace period
+    const timeUsed = TOTAL_TIME - timeLeft;
+    const effectiveTimeUsed = Math.max(0, timeUsed - GRACE_PERIOD);
+    const timeBonus = isTimeout ? MAX_POINTS : effectiveTimeUsed;
+    const pointsEarned = isCorrect ? Math.max(0, MAX_POINTS - timeBonus) : 0;
 
     // Update score and answers
     if (isCorrect) {
@@ -36,8 +46,10 @@ const QuizPage = () => {
         userAnswer: isTimeout ? "No answer (timeout)" : selectedAnswer,
         correctAnswer: questions[currentQuestion]?.answer,
         correct: isCorrect,
-        timeUsed: timeBonus,
-        pointsEarned: isCorrect ? 20 - timeBonus : 0,
+        timeUsed: timeUsed,
+        gracePeriodUsed: Math.min(timeUsed, GRACE_PERIOD),
+        effectiveTimeUsed: effectiveTimeUsed,
+        pointsEarned: pointsEarned,
       },
     ]);
 
@@ -45,7 +57,7 @@ const QuizPage = () => {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
-      setTimeLeft(20);
+      setTimeLeft(TOTAL_TIME);
     } else {
       setShowResult(true);
     }
@@ -72,7 +84,10 @@ const QuizPage = () => {
   if (!boothData) {
     return (
       <div className="min-h-screen bg-[url(/bg-potrait.jpg)] bg-cover bg-center max-w-md m-auto p-4">
-        {/* Error display remains same */}
+        <div className="bg-white p-6 rounded-lg border border-neutral-300 text-center">
+          <h2 className="text-xl font-bold mb-2">Booth Tidak Ditemukan</h2>
+          <p>Maaf, booth dengan ID {id} tidak ditemukan.</p>
+        </div>
       </div>
     );
   }
@@ -92,6 +107,9 @@ const QuizPage = () => {
     );
   }
 
+  // Visual indicator for grace period
+  const isInGracePeriod = TOTAL_TIME - timeLeft <= GRACE_PERIOD;
+
   return (
     <div className="min-h-screen bg-[url(/bg-potrait.jpg)] bg-cover bg-center max-w-md m-auto p-4">
       <div className="flex justify-between items-center">
@@ -102,14 +120,20 @@ const QuizPage = () => {
         </h1>
       </div>
 
-      <div className="bg-white space-y-4   mt-10 rounded-lg border border-neutral-300 p-6">
+      <div className="bg-white space-y-4 mt-10 rounded-lg border border-neutral-300 p-6">
         <div className="flex justify-between items-center">
           <p>
             Kuis {currentQuestion + 1}/{questions.length}
           </p>
           <div className="flex items-center gap-1">
             <TimerReset height={18} width={18} />
-            <p className="text-sm font-medium">{timeLeft}s</p>
+            <p
+              className={`text-sm font-medium ${
+                isInGracePeriod ? "text-green-600" : ""
+              }`}
+            >
+              {timeLeft}s {isInGracePeriod && "(Waktu Baca)"}
+            </p>
           </div>
         </div>
         <hr className="border-neutral-300" />

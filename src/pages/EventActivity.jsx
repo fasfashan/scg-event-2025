@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../layout";
 import Navigation from "../components/Navigation";
 import BoothList from "../components/BoothList";
-import Rundown from "../components/Rundown";
+import Leaderboard from "../components/Leaderboard";
 
 export default function Dashboard() {
   return (
@@ -10,7 +10,7 @@ export default function Dashboard() {
       <div className="w-full max-w-md">
         <Navigation />
         <BoothList />
-        <Rundown />
+        <Leaderboard />
       </div>
     </Layout>
   );
