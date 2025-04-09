@@ -40,7 +40,7 @@ function Login() {
   return (
     <div className="bg-white rounded-lg mt-40 border border-neutral-300 p-8 relative">
       <h1 className="text-sm font-medium text-center mb-6">
-        Masukkan nama perusahaan Anda
+        Masukkan nama Toko
       </h1>
 
       <form onSubmit={handleSearch}>
@@ -69,7 +69,7 @@ function Login() {
 
           {searchResults.length === 0 ? (
             <p className="text-red-500 text-sm">
-              Tidak ditemukan nama perusahaan "{searchTerm}"
+              Tidak ditemukan nama toko "{searchTerm}"
             </p>
           ) : (
             <ul className="divide-y divide-gray-200">
