@@ -20,7 +20,7 @@ export default function Booth() {
         </h1>
       </div>
       <Navigation />
-      <div className="bg-white mt-4 border border-neutral-300 rounded-lg p-4">
+      <div className="bg-white/80 mt-4 border border-neutral-300 rounded-lg p-4">
         <h1 className="text-xl font-semibold mb-2">Kuis</h1>
         <p className="text-neutral-500">
           Uji pengetahuan Anda dan dapatkan point!

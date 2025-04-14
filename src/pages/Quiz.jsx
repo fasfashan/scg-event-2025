@@ -120,7 +120,7 @@ const QuizPage = () => {
         </h1>
       </div>
 
-      <div className="bg-white space-y-4 mt-10 rounded-lg border border-neutral-300 p-6">
+      <div className="bg-white/80 space-y-4  mt-10 rounded-lg border border-neutral-300 p-6">
         <div className="flex justify-between items-center">
           <p>
             Kuis {currentQuestion + 1}/{questions.length}

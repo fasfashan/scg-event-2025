@@ -9,7 +9,7 @@ export default function Leaderboard() {
   };
   return (
     <>
-      <div className="bg-white rounded-lg p-4 mt-4 border border-neutral-300">
+      <div className="bg-white/80 rounded-lg p-4 mt-4 border border-neutral-300">
         <div className="flex items-center justify-center mb-4">
           <h2 className="text-lg font-bold text-center">
             Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering

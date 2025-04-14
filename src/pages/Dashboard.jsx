@@ -9,7 +9,7 @@ export default function Dashboard() {
     <Layout>
       <div className="w-full max-w-md">
         <div className="mt-10">
-          <div className="bg-white rounded-lg p-4 border border-neutral-300 mb-4">
+          <div className="bg-white/80 rounded-lg p-4 border border-neutral-300 mb-4">
             <img
               src="/img-greetings.jpg"
               className="rounded-lg mb-4 h-60 w-full object-cover"

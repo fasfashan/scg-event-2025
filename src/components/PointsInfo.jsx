@@ -4,7 +4,7 @@ import { user } from "../data/user";
 export default function PointsInfo() {
   return (
     <>
-      <div className="bg-white rounded-lg p-4 border border-neutral-300 mb-4">
+      <div className="bg-white/80 rounded-lg p-4 border border-neutral-300 mb-4">
         <h2 className="text-xl font-bold text-center mb-2">
           Total points: {user[0].quizPoints + user[0].surveyPoints}
         </h2>

@@ -18,7 +18,7 @@ const QuizResult = ({ score, totalQuestions, answers }) => {
 
   return (
     <Layout>
-      <div className="max-w-md mx-auto p-6 mt-10 bg-white rounded-lg border border-neutral-300    ">
+      <div className="max-w-md mx-auto p-6 mt-10 bg-white/80 rounded-lg border border-neutral-300    ">
         <h2 className="text-lg font-semibold text-center">Hasil Kuis</h2>
 
         <div className="mt-4 p-4 bg-gray-100 rounded-md text-center">

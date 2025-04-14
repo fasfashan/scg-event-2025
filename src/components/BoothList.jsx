@@ -48,13 +48,13 @@ export default function BoothList() {
 
   return (
     <div>
-      <div className="mt-4 border border-neutral-300 rounded-lg p-4 bg-white ">
+      <div className="mt-4 border border-neutral-300 rounded-lg p-4 bg-white/80 ">
         <h1 className="text-xl font-semibold text-center">Booth</h1>
         <p className="mt-2 text-sm text-gray-500 text-center">
           Kunjungi tiap booth dan dapatkan point dengan bermain game!
         </p>
       </div>
-      <div className="grid mt-4 grid-cols-3 gap-2 bg-white border border-neutral-300 rounded-lg p-4">
+      <div className="grid mt-4 grid-cols-3 gap-2 bg-white/80 border border-neutral-300 rounded-lg p-4">
         {booth.map((booth) => (
           <button
             key={booth.id}

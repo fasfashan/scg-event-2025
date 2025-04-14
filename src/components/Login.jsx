@@ -38,7 +38,7 @@ function Login() {
   };
 
   return (
-    <div className="bg-white rounded-lg mt-40 border border-neutral-300 p-8 relative">
+    <div className="bg-white/90   rounded-lg mt-40 border border-neutral-300 p-8 relative">
       <h1 className="text-sm font-medium text-center mb-6">
         Masukkan nama Toko
       </h1>

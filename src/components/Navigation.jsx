@@ -4,7 +4,7 @@ import { user } from "../data/user";
 import { Link } from "react-router-dom";
 export default function Navigation() {
   return (
-    <div className="bg-white mt-10 border p-2 border-neutral-300 rounded-lg">
+    <div className="bg-white/80 mt-10 border p-2 border-neutral-300 rounded-lg">
       <div className="flex items-center justify-between">
         <Link to="/dashboard">
           <div className="flex text-sm font-medium gap-2 items-center">
