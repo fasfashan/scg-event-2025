@@ -9,7 +9,7 @@ export default function Leaderboard() {
   };
   return (
     <div className="bg-[url(/bg-landscape.jpg)] p-20  min-h-screen bg-cover bg-center">
-      <div className="bg-gray-50 min-h0 rounded-lg w-full mt-20  m-auto p-12 border border-neutral-300">
+      <div className="bg-gray-50/90 min-h0 rounded-lg w-full mt-20  m-auto p-12 border border-neutral-300">
         <div className="flex items-center justify-center mb-4">
           <Award className="h-6 w-6 text-yellow-500 mr-2" />
           <h2 className="text-4xl font-bold text-center">
@@ -44,11 +44,11 @@ export default function Leaderboard() {
                   key={item.id}
                   className={` ${
                     item.id === 1
-                      ? "bg-red-100 font-bold"
+                      ? "bg-red-100 font-bold text-2xl"
                       : item.id === 2
-                      ? "bg-blue-100 font-semibold"
+                      ? "bg-blue-100 font-semibold text-xl"
                       : item.id === 3
-                      ? "bg-orange-100 font-medium"
+                      ? "bg-orange-100 font-medium text-lg"
                       : ""
                   }`}
                 >
