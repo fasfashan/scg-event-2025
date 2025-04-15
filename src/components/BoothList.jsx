@@ -79,15 +79,16 @@ export default function BoothList() {
             <h2 className="text-lg font-bold mb-4">Masukan 4 digit code</h2>
             <div className="flex justify-center gap-2 mb-4">
               {otp.map((digit, index) => (
-                <input
-                  key={index}
-                  ref={(el) => (inputRefs.current[index] = el)}
-                  type="tel"
-                  value={digit}
-                  maxLength="1"
-                  onChange={(e) => handleChange(index, e)}
-                  className="w-12 h-12 text-center border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                <form action={handleSubmit} key={index}>
+                  <input
+                    ref={(el) => (inputRefs.current[index] = el)}
+                    type="tel"
+                    value={digit}
+                    maxLength="1"
+                    onChange={(e) => handleChange(index, e)}
+                    className="w-12 h-12 text-center border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </form>
               ))}
             </div>
             <p className="text-sm text-gray-500 mb-2">
