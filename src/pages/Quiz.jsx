@@ -12,10 +12,12 @@ const QuizPage = () => {
   const boothData = booth.find((b) => b.id === boothId);
   const questions = boothData?.quiz || [];
 
-  // Konstanta untuk pengaturan waktu
+  // Konstanta untuk pengaturan waktu dan poin
   const TOTAL_TIME = 20; // Total waktu untuk menjawab (detik)
   const GRACE_PERIOD = 5; // Periode awal tanpa pengurangan poin (detik)
-  const MAX_POINTS = 20; // Poin maksimal
+  const MAX_POINTS = 150; // Poin maksimal jika menjawab dalam grace period
+  const POINTS_AFTER_GRACE = 140; // Poin setelah grace period (detik ke-6)
+  const POINTS_REDUCTION_PER_SECOND = 10; // Pengurangan poin per detik setelah grace period
 
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswer, setSelectedAnswer] = React.useState(null);
@@ -28,14 +30,25 @@ const QuizPage = () => {
     const isCorrect =
       !isTimeout && selectedAnswer === questions[currentQuestion]?.answer;
 
-    // Perhitungan poin dengan grace period
+    // Perhitungan poin dengan sistem baru
+    let pointsEarned = 0;
     const timeUsed = TOTAL_TIME - timeLeft;
-    const effectiveTimeUsed = Math.max(0, timeUsed - GRACE_PERIOD);
-    const timeBonus = isTimeout ? MAX_POINTS : effectiveTimeUsed;
-    const pointsEarned = isCorrect ? Math.max(0, MAX_POINTS - timeBonus) : 0;
 
-    // Update score and answers
     if (isCorrect) {
+      if (timeUsed <= GRACE_PERIOD) {
+        // Jika menjawab dalam waktu baca (5 detik pertama)
+        pointsEarned = MAX_POINTS;
+      } else {
+        // Mulai detik ke-6, poin awal 140, kemudian berkurang 10 setiap detik
+        const secondsAfterGracePeriod = timeUsed - GRACE_PERIOD;
+        pointsEarned = Math.max(
+          0,
+          POINTS_AFTER_GRACE -
+            (secondsAfterGracePeriod - 1) * POINTS_REDUCTION_PER_SECOND
+        );
+      }
+
+      // Update score untuk menghitung jawaban benar
       setScore((prev) => prev + 1);
     }
 
@@ -47,8 +60,6 @@ const QuizPage = () => {
         correctAnswer: questions[currentQuestion]?.answer,
         correct: isCorrect,
         timeUsed: timeUsed,
-        gracePeriodUsed: Math.min(timeUsed, GRACE_PERIOD),
-        effectiveTimeUsed: effectiveTimeUsed,
         pointsEarned: pointsEarned,
       },
     ]);
@@ -93,22 +104,46 @@ const QuizPage = () => {
   }
 
   if (showResult) {
+    // Hitung total poin
     const totalPoints = answers.reduce(
       (sum, answer) => sum + answer.pointsEarned,
       0
     );
+
+    // Hitung rata-rata waktu menjawab
+    const averageTime =
+      answers.reduce((sum, answer) => sum + answer.timeUsed, 0) /
+      answers.length;
+
     return (
       <QuizResult
         score={score}
         totalQuestions={questions.length}
         points={totalPoints}
         answers={answers}
+        averageTime={averageTime.toFixed(1)} // Rata-rata waktu dengan 1 angka dibelakang koma
       />
     );
   }
 
   // Visual indicator for grace period
   const isInGracePeriod = TOTAL_TIME - timeLeft <= GRACE_PERIOD;
+
+  // Menghitung poin yang akan didapat jika menjawab benar sekarang
+  const calculateCurrentPoints = () => {
+    const timeUsed = TOTAL_TIME - timeLeft;
+
+    if (timeUsed <= GRACE_PERIOD) {
+      return MAX_POINTS;
+    } else {
+      const secondsAfterGracePeriod = timeUsed - GRACE_PERIOD;
+      return Math.max(
+        0,
+        POINTS_AFTER_GRACE -
+          (secondsAfterGracePeriod - 1) * POINTS_REDUCTION_PER_SECOND
+      );
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[url(/bg-potrait.jpg)] bg-cover bg-center max-w-md m-auto p-4">
@@ -129,10 +164,11 @@ const QuizPage = () => {
             <TimerReset height={18} width={18} />
             <p
               className={`text-sm font-medium ${
-                isInGracePeriod ? "text-green-600" : ""
+                isInGracePeriod ? "text-green-600" : "text-orange-600"
               }`}
             >
-              {timeLeft}s {isInGracePeriod && "(Waktu Baca)"}
+              {timeLeft}s {isInGracePeriod && "(Waktu Baca: 150 poin)"}
+              {!isInGracePeriod && ` (${calculateCurrentPoints()} poin)`}
             </p>
           </div>
         </div>

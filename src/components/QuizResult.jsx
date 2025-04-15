@@ -1,9 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../layout";
-import { CheckCircle, XCircle } from "lucide-react";
+import { CheckCircle, XCircle, Clock } from "lucide-react";
 
-const QuizResult = ({ score, totalQuestions, answers }) => {
+const QuizResult = ({
+  score,
+  totalQuestions,
+  answers,
+  points,
+  averageTime,
+}) => {
   const navigate = useNavigate();
 
   const handleBackToHome = () => {
@@ -16,9 +22,12 @@ const QuizResult = ({ score, totalQuestions, answers }) => {
     0
   );
 
+  // Gunakan points dari props jika ada, jika tidak gunakan calculatedPoints
+  const displayPoints = points || calculatedPoints;
+
   return (
     <Layout>
-      <div className="max-w-md mx-auto p-6 mt-10 bg-white/80 rounded-lg border border-neutral-300    ">
+      <div className="max-w-md mx-auto p-6 mt-10 bg-white/80 rounded-lg border border-neutral-300">
         <h2 className="text-lg font-semibold text-center">Hasil Kuis</h2>
 
         <div className="mt-4 p-4 bg-gray-100 rounded-md text-center">
@@ -27,8 +36,15 @@ const QuizResult = ({ score, totalQuestions, answers }) => {
           </p>
           <p className="text-gray-700">
             Selamat! Kamu mendapatkan{" "}
-            <span className="font-bold">{calculatedPoints} </span> point
+            <span className="font-bold">{displayPoints} </span> point
           </p>
+          <div className="flex items-center justify-center mt-2 text-blue-600">
+            <Clock height={16} className="mr-1" />
+            <p className="text-sm">
+              Rata-rata waktu menjawab:{" "}
+              <span className="font-bold">{averageTime}</span> detik
+            </p>
+          </div>
         </div>
 
         <div className="mt-4">

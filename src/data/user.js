@@ -5,6 +5,7 @@ export const user = [
     phoneNumber: "085723869595",
     quizPoints: 100,
     surveyPoints: 200,
+    averageTime: 4,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const user = [
     phoneNumber: "08159759710",
     quizPoints: 39,
     surveyPoints: 200,
+    averageTime: 7,
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const user = [
     phoneNumber: "081210698970",
     quizPoints: 86,
     surveyPoints: 200,
+    averageTime: 6,
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const user = [
     phoneNumber: "087784433938",
     quizPoints: 90,
     surveyPoints: 200,
+    averageTime: 5,
   },
   {
     id: 5,
@@ -33,5 +37,6 @@ export const user = [
     phoneNumber: "081311442442",
     quizPoints: 29,
     surveyPoints: 200,
+    averageTime: 9,
   },
 ];

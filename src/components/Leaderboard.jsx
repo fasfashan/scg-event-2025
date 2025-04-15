@@ -9,50 +9,62 @@ export default function Leaderboard() {
   };
   return (
     <>
-      <div className="bg-white/80 rounded-lg p-4 mt-4 border border-neutral-300">
+      <div className="bg-white/80 rounded-lg p-4 mt-4 border border-neutral-300 overflow-auto">
         <div className="flex items-center justify-center mb-4">
           <h2 className="text-lg font-bold text-center">
             Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering
           </h2>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full">
+        <div className="mt-10 overflow-x-auto">
+          <table className="min-w-[600px] w-full">
             <thead>
-              <tr className="text-xs text-gray-700">
-                <th className="py-2 text-left">Rank</th>
-                <th className="py-2 text-left">Company</th>
-                <th className="py-2 text-right">Quiz Point</th>
-                <th className="py-2 text-right">Survey Point</th>
-                <th className="py-2 text-right">Total Points</th>
+              <tr className="text-xs text-gray-700 whitespace-nowrap">
+                <th className="py-2 text-left px-2">Peringkat</th>
+                <th className="py-2 text-left px-2">Perusahaan</th>
+                <th className="py-2 text-right px-2">Poin Kuis</th>
+                <th className="py-2 text-right px-2">Poin Survei</th>
+                <th className="py-2 text-right px-2">Rata-rata Jawaban Kuis</th>
+                <th className="py-2 text-right px-2">Total Point</th>
               </tr>
             </thead>
             <tbody>
-              {user.map((item) => (
-                <tr
-                  key={item.id}
-                  className={` text-xs ${
-                    item.id === 1
-                      ? "bg-red-100 font-bold"
-                      : item.id === 2
-                      ? "bg-blue-100 font-semibold"
-                      : item.id === 3
-                      ? "bg-orange-100 font-medium"
-                      : ""
-                  }`}
-                >
-                  <td className="py-2 px-1">
-                    {medals[item.id]}
-                    {item.id}
-                  </td>
-                  <td className="py-2 px-1">{item.name}</td>
-                  <td className="py-2 px-1 text-right">{item.quizPoints}</td>
-                  <td className="py-2 px-1 text-right">{item.surveyPoints}</td>
-                  <td className="py-2 px-1 text-right font-medium">
-                    {item.quizPoints + item.surveyPoints}
-                  </td>
-                </tr>
-              ))}
+              {[...user]
+                .sort(
+                  (a, b) =>
+                    b.quizPoints +
+                    b.surveyPoints -
+                    (a.quizPoints + a.surveyPoints)
+                )
+                .map((item, index) => (
+                  <tr
+                    key={item.id}
+                    className={` whitespace-nowrap ${
+                      index === 0
+                        ? "bg-red-100 text-lg font-bold"
+                        : index === 1
+                        ? "bg-blue-100 text-base font-semibold"
+                        : index === 2
+                        ? "bg-orange-100 text-sm font-medium"
+                        : ""
+                    }`}
+                  >
+                    <td className="py-2 px-2">
+                      {medals[index + 1]} {index + 1}
+                    </td>
+                    <td className="py-2 px-2">{item.name}</td>
+                    <td className="py-2 px-2 text-right">{item.quizPoints}</td>
+                    <td className="py-2 px-2 text-right">
+                      {item.surveyPoints}
+                    </td>
+                    <td className="py-2 px-2 text-right">
+                      {item.averageTime} detik
+                    </td>
+                    <td className="py-2 px-2 text-right font-medium">
+                      {item.quizPoints + item.surveyPoints}
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>

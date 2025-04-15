@@ -9,16 +9,11 @@ export default function Dashboard() {
     <Layout>
       <div className="w-full max-w-md">
         <div className="mt-10">
-          <div className="bg-white/80 rounded-lg p-4 border border-neutral-300 mb-4">
-            <img
-              src="/img-greetings.jpg"
-              className="rounded-lg mb-4 h-60 w-full object-cover"
-              alt=""
-            />
+          <div className="mb-4">
             <h1 className="text-xl font-bold text-center mb-2">
               Selamat Datang <br /> Special Customer Gathering
             </h1>{" "}
-            <p className="text-center text-neutral-500">
+            <p className="text-center ">
               Tukarkan point Anda dengan hadiah menarik untuk 10 orang pemenang
               peserta terbaik
             </p>
@@ -26,7 +21,6 @@ export default function Dashboard() {
           <PointsInfo />
           <ActivityTabs />
           <Leaderboard />
-          <Rundown />
         </div>
       </div>
     </Layout>
