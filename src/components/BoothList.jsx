@@ -67,9 +67,7 @@ export default function BoothList() {
             disabled={booth.id === 2}
           >
             <img src="/booth-icon.svg" alt="Booth Icon" />
-            <p className="font-semibold text-xs">
-              {booth.name} {booth.id === 2 && "(sudah dikunjungi)"}
-            </p>
+            <p className="font-semibold uppercase text-xs">{booth.name}</p>
           </button>
         ))}
       </div>
@@ -84,7 +82,7 @@ export default function BoothList() {
                 <input
                   key={index}
                   ref={(el) => (inputRefs.current[index] = el)}
-                  type="text"
+                  type="tel"
                   value={digit}
                   maxLength="1"
                   onChange={(e) => handleChange(index, e)}

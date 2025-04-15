@@ -16,7 +16,7 @@ export default function Leaderboard() {
           </h2>
         </div>
 
-        <div className="mt-10 overflow-x-auto">
+        <div className="mt-10 overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
           <table className="min-w-[600px] w-full">
             <thead>
               <tr className="text-xs text-gray-700 whitespace-nowrap">
@@ -41,11 +41,11 @@ export default function Leaderboard() {
                     key={item.id}
                     className={` whitespace-nowrap ${
                       index === 0
-                        ? "bg-red-100 text-lg font-bold"
+                        ? "bg-red-100 text-xl font-bold"
                         : index === 1
-                        ? "bg-blue-100 text-base font-semibold"
+                        ? "bg-blue-100 text-lg font-semibold"
                         : index === 2
-                        ? "bg-orange-100 text-sm font-medium"
+                        ? "bg-orange-100 text-base font-medium"
                         : ""
                     }`}
                   >

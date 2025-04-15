@@ -5,7 +5,7 @@ export default defineConfig({
   server: {
     historyApiFallback: true,
   },
-  plugins: tailwindcss(),
+  plugins: [tailwindcss(), "tailwind-scrollbar"],
   build: {
     outDir: "dist",
     // Jika menggunakan React Router dengan mode history

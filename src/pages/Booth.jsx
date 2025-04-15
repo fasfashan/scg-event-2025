@@ -22,13 +22,25 @@ export default function Booth() {
       <Navigation />
       <div className="bg-white/80 mt-4 border border-neutral-300 rounded-lg p-4">
         <h1 className="text-xl font-semibold mb-2">Kuis</h1>
-        <p className="text-neutral-500">
-          Uji pengetahuan Anda dan dapatkan point!
+        <p className="">
+          Kumpulkan point yang bisa Anda tukarkan dengan hadiah menarik di
+          Special Customer Gethering 2025 :
         </p>
         <ul className="mt-6 text-sm font-medium list-disc list-inside space-y-2">
-          <li>Waktu kuis 20 detik untuk setiap soal</li>
-          <li>Total 3 pertanyaan</li>
-          <li>Kecepatan mempengaruhi jumlah poin yang diperoleh</li>
+          <li>
+            Waktu kuis 20 detik dengan 5 detik waktu baca untuk setiap soal
+          </li>
+          <li>⁠Total kuis terdiri dari 3 pertanyaan acak</li>
+          <li>
+            Setiap pertanyaan yang berhasil terjawab dengan benar akan mendapat
+            point
+          </li>
+          <li>
+            Besaran point terhitung dari kecepatan menjawab (semakin cepat //
+            eslint-disable-next-line no-irregular-whitespace,
+            no-irregular-whitespace menjawab dengan benar, semakin besar point
+            yang Anda dapatkan)
+          </li>
         </ul>
         <button
           onClick={handleClick}

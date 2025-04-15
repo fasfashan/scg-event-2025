@@ -7,7 +7,7 @@ import Leaderboard from "../components/Leaderboard";
 export default function Dashboard() {
   return (
     <Layout>
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-md ">
         <Navigation />
         <BoothList />
         <Leaderboard />

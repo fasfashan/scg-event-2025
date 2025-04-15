@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { ClipboardList, Users, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Rundown from "./Rundown";
-import "../index.css"; // Import your CSS file here
-import "../App.css"; // Import your CSS file here
+
 export default function ActivityTabs() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -17,7 +16,7 @@ export default function ActivityTabs() {
 
   return (
     <>
-      <div className="bg-white/80 rounded-lg mb p-4 border border-neutral-300 mb-4">
+      <div className="bg-white/80 rounded-lg  b p-4 border border-neutral-300 mb-4">
         <div className="grid grid-cols-3 gap-4">
           <Link
             to="/dashboard/event-activity"
@@ -48,7 +47,7 @@ export default function ActivityTabs() {
       {isPopupOpen && (
         <div className="fixed  min-h-screen inset-0 p-4 z-50 flex items-center justify-center bg-neutral-900/50 max-w-md m-auto">
           <div className="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-end items-center mb-4">
               <button
                 onClick={closePopup}
                 className="text-gray-500 hover:text-gray-700"
