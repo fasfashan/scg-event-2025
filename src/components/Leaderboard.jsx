@@ -10,11 +10,17 @@ export default function Leaderboard() {
   return (
     <>
       <div className="bg-white/80 rounded-lg p-4 mt-4 border border-neutral-300 overflow-auto">
-        <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center flex-col gap-2 justify-center mb-4">
           <h2 className="text-lg font-bold text-center">
             Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering
             2025
           </h2>
+          <p>
+            Anda berada di peringkat ke:{" "}
+            <span className="bg-blue-500 px-2 py-1 rounded-lg text-white">
+              5
+            </span>
+          </p>
         </div>
 
         <div className="mt-10 overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
@@ -40,13 +46,15 @@ export default function Leaderboard() {
                 .map((item, index) => (
                   <tr
                     key={item.id}
-                    className={` whitespace-nowrap ${
+                    className={`whitespace-nowrap ${
                       index === 0
                         ? "bg-red-100 text-xl font-bold"
                         : index === 1
                         ? "bg-blue-100 text-lg font-semibold"
                         : index === 2
                         ? "bg-orange-100 text-base font-medium"
+                        : index === 4
+                        ? "border-2 border-blue-500" //  Style highlight current rank user
                         : ""
                     }`}
                   >
