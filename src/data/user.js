@@ -41,7 +41,7 @@ export const user = [
   },
   {
     id: 6,
-    name: "Dimas Pratama",
+    name: "PT Maju Mundur",
     phoneNumber: "081234567890",
     quizPoints: 350,
     surveyPoints: 180,
@@ -49,7 +49,7 @@ export const user = [
   },
   {
     id: 7,
-    name: "Indah Permata",
+    name: "PT Sukses Selalu",
     phoneNumber: "087712345678",
     quizPoints: 340,
     surveyPoints: 190,
@@ -57,7 +57,7 @@ export const user = [
   },
   {
     id: 8,
-    name: "Rizki Ramadhan",
+    name: "PT Makmur Jaya",
     phoneNumber: "089987654321",
     quizPoints: 330,
     surveyPoints: 150,
@@ -65,7 +65,7 @@ export const user = [
   },
   {
     id: 9,
-    name: "Anisa Wijaya",
+    name: "PT Sinar Abadi",
     phoneNumber: "081398765432",
     quizPoints: 320,
     surveyPoints: 210,
@@ -73,7 +73,7 @@ export const user = [
   },
   {
     id: 10,
-    name: "Budi Santoso",
+    name: "PT Sejahtera Bahagia",
     phoneNumber: "085812345678",
     quizPoints: 300,
     surveyPoints: 170,
