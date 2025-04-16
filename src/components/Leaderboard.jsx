@@ -54,7 +54,7 @@ export default function Leaderboard() {
                         : index === 2
                         ? "bg-orange-100 text-base font-medium"
                         : index === 10
-                        ? "border-2 border-blue-500" //  Style highlight current rank user
+                        ? "bg-green-100" //  Style highlight current rank user
                         : ""
                     }`}
                   >
