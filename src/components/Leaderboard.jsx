@@ -18,7 +18,7 @@ export default function Leaderboard() {
           <p>
             Anda berada di peringkat ke:{" "}
             <span className="bg-blue-500 px-2 py-1 rounded-lg text-white">
-              5
+              30
             </span>
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function Leaderboard() {
                         ? "bg-blue-100 text-lg font-semibold"
                         : index === 2
                         ? "bg-orange-100 text-base font-medium"
-                        : index === 4
+                        : index === 10
                         ? "border-2 border-blue-500" //  Style highlight current rank user
                         : ""
                     }`}
                   >
                     <td className="py-2 px-2">
-                      {medals[index + 1]} {index + 1}
+                      {medals[index + 1]} {item.id}
                     </td>
                     <td className="py-2 px-2">{item.name}</td>
                     <td className="py-2 px-2 text-right">{item.quizPoints}</td>

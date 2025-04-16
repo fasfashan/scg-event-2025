@@ -79,4 +79,12 @@ export const user = [
     surveyPoints: 170,
     averageTime: 13,
   },
+  {
+    id: 30,
+    name: "Budi Sudarsono",
+    phoneNumber: "085812345678",
+    quizPoints: 280,
+    surveyPoints: 170,
+    averageTime: 16,
+  },
 ];
