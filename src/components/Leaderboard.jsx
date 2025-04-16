@@ -13,6 +13,7 @@ export default function Leaderboard() {
         <div className="flex items-center justify-center mb-4">
           <h2 className="text-lg font-bold text-center">
             Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering
+            2025
           </h2>
         </div>
 

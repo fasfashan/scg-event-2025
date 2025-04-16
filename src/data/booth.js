@@ -2,7 +2,7 @@
 export const booth = [
   {
     id: 1,
-    name: "Semen",
+    name: "Semen SCG",
     code: 2938,
     quiz: [
       {
@@ -24,7 +24,7 @@ export const booth = [
   },
   {
     id: 2,
-    name: "Mortar & AAC",
+    name: "SG Mortar",
     code: 2939,
     quiz: [
       {
@@ -46,7 +46,7 @@ export const booth = [
   },
   {
     id: 3,
-    name: "Jayamix",
+    name: "Jayamix & Precast",
     code: 2940,
     quiz: [
       {
@@ -68,7 +68,7 @@ export const booth = [
   },
   {
     id: 4,
-    name: "Sahabat",
+    name: "Sahabat App",
     code: 2941,
     quiz: [
       {
@@ -90,7 +90,7 @@ export const booth = [
   },
   {
     id: 5,
-    name: "Sourching",
+    name: "Sourcing",
     code: 2942,
     quiz: [
       {
