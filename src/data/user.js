@@ -4,7 +4,7 @@ export const user = [
     name: "Recha Anita Putri",
     phoneNumber: "085723869595",
     quizPoints: 400,
-    surveyPoints: 200,
+    survey: true,
     averageTime: 4,
   },
   {
@@ -12,7 +12,7 @@ export const user = [
     name: "Sandy",
     phoneNumber: "08159759710",
     quizPoints: 390,
-    surveyPoints: 200,
+    survey: true,
     averageTime: 5,
   },
   {
@@ -20,7 +20,7 @@ export const user = [
     name: "Vaika Putri Andini",
     phoneNumber: "081210698970",
     quizPoints: 380,
-    surveyPoints: 200,
+    survey: true,
     averageTime: 6,
   },
   {
@@ -28,7 +28,7 @@ export const user = [
     name: "Viona Revlizia",
     phoneNumber: "087784433938",
     quizPoints: 370,
-    surveyPoints: 200,
+    survey: false,
     averageTime: 7,
   },
   {
@@ -36,7 +36,7 @@ export const user = [
     name: "Binggg",
     phoneNumber: "081311442442",
     quizPoints: 360,
-    surveyPoints: 200,
+    survey: false,
     averageTime: 8,
   },
   {
@@ -44,7 +44,7 @@ export const user = [
     name: "PT Maju Mundur",
     phoneNumber: "081234567890",
     quizPoints: 350,
-    surveyPoints: 180,
+    survey: false,
     averageTime: 9,
   },
   {
@@ -52,7 +52,7 @@ export const user = [
     name: "PT Sukses Selalu",
     phoneNumber: "087712345678",
     quizPoints: 340,
-    surveyPoints: 190,
+    survey: false,
     averageTime: 10,
   },
   {
@@ -60,7 +60,7 @@ export const user = [
     name: "PT Makmur Jaya",
     phoneNumber: "089987654321",
     quizPoints: 330,
-    surveyPoints: 150,
+    survey: false,
     averageTime: 11,
   },
   {
@@ -68,7 +68,7 @@ export const user = [
     name: "PT Sinar Abadi",
     phoneNumber: "081398765432",
     quizPoints: 320,
-    surveyPoints: 210,
+    survey: false,
     averageTime: 12,
   },
   {
@@ -76,15 +76,15 @@ export const user = [
     name: "PT Sejahtera Bahagia",
     phoneNumber: "085812345678",
     quizPoints: 300,
-    surveyPoints: 170,
+    survey: false,
     averageTime: 13,
   },
   {
     id: 30,
-    name: "Budi Sudarsono",
+    name: "PT Abadi Jaya",
     phoneNumber: "085812345678",
     quizPoints: 280,
-    surveyPoints: 170,
+    survey: false,
     averageTime: 16,
   },
 ];

@@ -31,7 +31,7 @@ export default function Leaderboard() {
                   Quiz Point
                 </th>
                 <th className="py-2 font-normal text-gray-500 text-right">
-                  Survey Point
+                  Survey
                 </th>
                 <th className="py-2 font-normal text-gray-500 text-right">
                   Total Points

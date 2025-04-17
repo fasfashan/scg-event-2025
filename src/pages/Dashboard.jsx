@@ -11,10 +11,10 @@ export default function Dashboard() {
         <div className="mt-10">
           <div className="mb-4">
             <h1 className="text-xl font-bold text-center mb-2">
-              Selamat Datang <br /> Special Customer Gathering
+              Selamat Datang PT Abadi Jaya <br /> di Special Customer Gathering
             </h1>{" "}
             <p className="text-center ">
-              Tukarkan point Anda dengan hadiah menarik untuk 10 orang pemenang
+              Kumpulkan point Anda dengan hadiah menarik untuk 10 orang pemenang
               peserta terbaik
             </p>
           </div>

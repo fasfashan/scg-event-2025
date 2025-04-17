@@ -6,7 +6,7 @@ export default function PointsInfo() {
     <>
       <div className="bg-white/80 rounded-lg p-4 border border-neutral-300 mb-4">
         <h2 className="text-xl font-bold text-center mb-2">
-          Total points: {user[0].quizPoints + user[0].surveyPoints}
+          Total points: {user[10].quizPoints}
         </h2>
         <p className="text-gray-600 text-sm text-center mb-4">
           Dapatkan poin dengan menyelesaikan kuis dan survei
@@ -19,17 +19,7 @@ export default function PointsInfo() {
                 <Award className="h-5 w-5 " />
                 <span>Kuis Booth Point</span>
               </div>
-              <span>{user[0].quizPoints}</span>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between bg-gray-100 border-neutral-200 border rounded-lg p-3">
-            <div className="flex items-center w-full justify-between">
-              <div className="flex items-center gap-2">
-                <ClipboardList className="h-5 w-5 " />
-                <span>Survey Point </span>
-              </div>
-              <span>{user[0].surveyPoints}</span>
+              <span>{user[10].quizPoints}</span>
             </div>
           </div>
         </div>

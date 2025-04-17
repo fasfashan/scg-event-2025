@@ -8,6 +8,7 @@ import Booth from "./pages/Booth";
 import Quiz from "./pages/Quiz";
 import Leaderboard from "./pages/Leaderboard";
 import Survey from "./pages/Survey";
+import RegistrationForm from "./pages/Registration";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/survey",
     element: <Survey />,
+  },
+  {
+    path: "/daftar",
+    element: <RegistrationForm />,
   },
 ]);
 
