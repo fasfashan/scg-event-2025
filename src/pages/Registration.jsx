@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../layout";
-import { useNavigate } from "react-router-dom";
 export default function RegistrationForm() {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     namaToko: "",
     namaOwner: "",
@@ -24,12 +22,10 @@ export default function RegistrationForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
 
     // Show toast notification
     setShowToast(true);
     setTimeout(() => {
-      navigate("/"); // Redirect to dashboard after 3 seconds
       setShowToast(false);
     }, 3000);
   };

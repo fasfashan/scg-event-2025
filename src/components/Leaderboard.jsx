@@ -30,7 +30,7 @@ export default function Leaderboard() {
                 <th className="py-2 text-left px-2">Peringkat</th>
                 <th className="py-2 text-left px-2">Perusahaan</th>
                 <th className="py-2 text-right px-2">Poin Kuis</th>
-                <th className="py-2 text-right px-2">Survei</th>
+
                 <th className="py-2 text-right px-2">Rata-rata Jawaban Kuis</th>
                 <th className="py-2 text-right px-2">Total Point</th>
               </tr>
@@ -63,13 +63,6 @@ export default function Leaderboard() {
                     </td>
                     <td className="py-2 px-2">{item.name}</td>
                     <td className="py-2 px-2 text-right">{item.quizPoints}</td>
-                    <td className="py-2 px-2 text-right">
-                      <span
-                        className={`inline-block w-3 h-3 rounded-full ${
-                          item.survey ? "bg-green-500" : "bg-red-500"
-                        }`}
-                      ></span>
-                    </td>
 
                     <td className="py-2 px-2 text-right">
                       {item.averageTime} detik

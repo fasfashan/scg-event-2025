@@ -58,9 +58,7 @@ function PhoneVerification({ onClose, company }) {
             />
             {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
             <p className="text-xs text-gray-500 mt-2">
-              Nomor telepon untuk {company.name} adalah:{" "}
-              {user.find((u) => u.name === company.name)?.phoneNumber ||
-                "Tidak tersedia"}
+              Masukan nomor telpon dengan format : 081xxxxxx
             </p>
           </div>
 
