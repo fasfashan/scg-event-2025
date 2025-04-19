@@ -50,7 +50,7 @@ export default function Leaderboard({
             Top 10 Peserta Terbaik Pemenang Hadiah Special Customer Gathering
             2025
           </h2>
-          <p className="text-lg">{dealerName}</p>
+          <p className="text-lg uppercase font-semibold">{dealerName}</p>
 
           {/* Tampilkan peringkat hanya jika showUserRank aktif */}
           {showUserRank && (
@@ -82,7 +82,9 @@ export default function Leaderboard({
                     <tr
                       key="separator"
                       className="border-t border-b border-dashed border-gray-300"
-                    ></tr>
+                    >
+                      `
+                    </tr>
                   );
                 }
 
