@@ -20,7 +20,18 @@ export default function Dashboard() {
           </div>
           <PointsInfo />
           <ActivityTabs />
-          <Leaderboard />
+          <Leaderboard
+            dealerName={"CV. Cahaya Baru Sejahtera"}
+            filterDealer={"CV. Cahaya Baru Sejahtera"}
+            currentUserId={23}
+            showUserRank={true} // Aktifkan tampilan peringkat hanya di komponen pertama
+          />
+          <Leaderboard
+            dealerName={"PT. Makmur Anugerah Subur"}
+            filterDealer={"PT. Makmur Anugerah Subur"}
+            currentUserId={20}
+            // showUserRank tidak diaktifkan, defaultnya false
+          />
         </div>
       </div>
     </Layout>
