@@ -13,7 +13,7 @@ export default function Navigation() {
           </div>
         </Link>
         <span className="text-sm font-medium">
-          Total points: {user[0].quizPoints + user[0].surveyPoints}
+          Total points: {user[22].quizPoints}
         </span>
       </div>
     </div>
