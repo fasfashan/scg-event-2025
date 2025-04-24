@@ -3,7 +3,7 @@ import Layout from "../layout";
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({
     namaToko: "",
-    namaOwner: "",
+    namaPeserta: "",
     noTelepon: "",
     registrasiPeserta: "",
     eventKota: "",
@@ -72,14 +72,14 @@ export default function RegistrationForm() {
                 htmlFor="namaOwner"
                 className="block text-sm font-medium text-gray-700"
               >
-                Nama Owner
+                Nama Peserta
               </label>
               <input
-                id="namaOwner"
-                name="namaOwner"
+                id="namaPeserta"
+                name="namaPeserta"
                 type="text"
-                placeholder="Masukkan nama owner"
-                value={formData.namaOwner}
+                placeholder="Masukkan nama peserta"
+                value={formData.namaPeserta}
                 onChange={handleChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -151,10 +151,6 @@ export default function RegistrationForm() {
                   Pilih kota event
                 </option>
                 <option value="cianjur">Cianjur</option>
-                <option value="bandung">Bandung</option>
-                <option value="sukabumi">Sukabumi</option>
-                <option value="medan">Bogor</option>
-                <option value="makassar">Depok</option>
               </select>
             </div>
 
