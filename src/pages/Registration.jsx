@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Layout from "../layout";
+
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({
     namaToko: "",
@@ -11,6 +14,15 @@ export default function RegistrationForm() {
   });
 
   const [showToast, setShowToast] = useState(false);
+  // Initialize isRegistered state with a default value
+  const [isRegistered, setIsRegistered] = useState(false);
+
+  // Use useEffect to safely access localStorage after component mounts
+  useEffect(() => {
+    // Check localStorage on component mount
+    const registrationStatus = localStorage.getItem("isRegistered") === "true";
+    setIsRegistered(registrationStatus);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +35,10 @@ export default function RegistrationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Save to localStorage that user has registered
+    localStorage.setItem("isRegistered", "true");
+    setIsRegistered(true);
+
     // Show toast notification
     setShowToast(true);
     setTimeout(() => {
@@ -30,10 +46,27 @@ export default function RegistrationForm() {
     }, 3000);
   };
 
-  return (
-    <Layout>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden mt-10">
-        {/* Card Header */}
+  // Render content safely
+  const renderContent = () => {
+    if (isRegistered) {
+      return (
+        <div className="p-6">
+          <div
+            className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+            role="alert"
+          >
+            <strong className="font-bold">Registrasi Berhasil!</strong>
+            <span className="block sm:inline">
+              {" "}
+              Anda telah terdaftar untuk event ini.
+            </span>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <>
         <div className="p-6 border-b border-gray-200">
           <h2 className="text-xl font-semibold text-gray-800">
             Formulir Registrasi
@@ -189,6 +222,15 @@ export default function RegistrationForm() {
             </button>
           </div>
         </form>
+      </>
+    );
+  };
+
+  return (
+    <Layout>
+      <div className="bg-white rounded-lg shadow-md overflow-hidden mt-10">
+        {/* Render content based on registration status */}
+        {renderContent()}
 
         {/* Custom Toast Notification */}
         {showToast && (
