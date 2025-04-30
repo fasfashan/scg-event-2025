@@ -14,7 +14,7 @@ export default function Leaderboard() {
     );
   const top10Users = sortedUsers.slice(0, 10);
   return (
-    <div className="bg-[url(/bg-landscape.jpg)] p-20  min-h-screen bg-cover bg-center">
+    <div className="bg-[url(/bg-livescore.jpg)] p-20  min-h-screen bg-cover bg-center">
       <div className="flex items-center gap-4">
         <div className="bg-gray-50/90 min-h0 rounded-lg w-full mt-20  m-auto p-12 border border-neutral-300">
           <div className="flex items-center justify-center flex-col gap-4 mb-4">
