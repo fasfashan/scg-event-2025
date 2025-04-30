@@ -50,18 +50,46 @@ export default function RegistrationForm() {
   const renderContent = () => {
     if (isRegistered) {
       return (
-        <div className="p-6">
-          <div
-            className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
-            role="alert"
-          >
-            <strong className="font-bold">Registrasi Berhasil!</strong>
-            <span className="block sm:inline">
-              {" "}
-              Anda telah terdaftar untuk event ini.
-            </span>
+        <>
+          <div className="bg-green-500 text-white px-6 py-3 rounded-md shadow-lg">
+            <div className="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <div>
+                <h3 className="font-bold">Registrasi Berhasil</h3>
+                <p className="text-sm">Data Anda telah berhasil disimpan.</p>
+              </div>
+            </div>
           </div>
-        </div>
+          <div className="p-6">
+            <div
+              className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+              role="alert"
+            >
+              {/* <strong className="font-bold">Registrasi Berhasil!</strong> */}
+              <div className="block text-center">
+                <p />
+                Sampai Jumpa di
+                <br />
+                <strong>SCG Special Customer Gathering 2025</strong>
+                <br />
+                Ramah Lingkungan, Untuk Masa Depan
+              </div>
+            </div>
+          </div>
+        </>
       );
     }
 
@@ -228,7 +256,7 @@ export default function RegistrationForm() {
 
   return (
     <Layout>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden mt-10">
+      <div className="bg-white/90 rounded-lg shadow-md overflow-hidden mt-10">
         {/* Render content based on registration status */}
         {renderContent()}
 

@@ -11,7 +11,8 @@ export default function Dashboard() {
         <div className="mt-10">
           <div className="mb-4">
             <h1 className="text-xl font-bold text-center mb-2">
-              Selamat Datang PT Abadi Jaya <br /> di Special Customer Gathering
+              Selamat Datang PT Abadi Jaya di <br /> SCG Special Customer
+              Gathering 2025
             </h1>{" "}
             <p className="text-center ">
               Kumpulkan point Anda dengan hadiah menarik untuk 10 orang pemenang
