@@ -23,13 +23,12 @@ const Survey = () => {
         {!submitted ? (
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded border border-neutral-300"
+            className="bg-white/80 p-6 rounded border border-neutral-300"
           >
-            <h2 className="text-xl font-semibold text-center">Survei Acara</h2>
-            <p className="text-gray-500 text-center mb-4">
-              Mohon bagikan pendapat Anda tentang acara ini. Lengkapi survei ini
-              untuk memperoleh 200 poin!
-            </p>
+            <h2 className="text-xl mb-8 font-semibold text-center">
+              Survei Acara
+            </h2>
+
             {survey.map((q) => (
               <div key={q.id} className="mb-4">
                 <p className="font-medium">{q.question}</p>
@@ -56,15 +55,15 @@ const Survey = () => {
             </button>
           </form>
         ) : (
-          <div className="bg-white p-6 rounded border border-neutral-300 text-center">
-            <div className="bg-green-700 text-white py-2 px-4 rounded-full inline-block mb-4">
-              +200 Points!
+          <div className="bg-white/80 p-6 rounded border border-neutral-300 text-center">
+            <div className="space-y-1 mb-8">
+              <h2 className="text-lg font-semibold">
+                Terimakasih atas masukan Anda
+              </h2>
+              <p cl>
+                Kami akan menggunakannya untuk meningkatkan acara mendatang
+              </p>
             </div>
-            <h2 className="text-lg mb-4 font-semibold">
-              Terimakasih atas masukan Anda, kami akan menggunakannya untuk
-              meningkatkan acara mendatang
-            </h2>
-
             <Link
               to="/dashboard"
               className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"

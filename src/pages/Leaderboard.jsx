@@ -43,9 +43,6 @@ export default function Leaderboard() {
                   <th className="py-2 font-normal text-gray-500 text-right">
                     Rata-rata Jawaban Kuis
                   </th>
-                  <th className="py-2 font-normal text-gray-500 text-right">
-                    Total Point
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -82,9 +79,6 @@ export default function Leaderboard() {
                       </td>
                       <td className="py-2 px-2 text-right">
                         {item.averageTime} detik
-                      </td>
-                      <td className="py-2 px-2 text-right font-medium">
-                        {item.quizPoints}
                       </td>
                     </tr>
                   ))}

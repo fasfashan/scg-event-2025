@@ -27,8 +27,8 @@ export default function ActivityTabs() {
           </Link>
 
           <Link
-            to="/dashboard/survey"
-            className="bg-gray-50/80 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-100 transition-colors"
+            to="/dashboard"
+            className="bg-gray-200 opacity-50 cursor-not-allowed rounded-lg p-4 flex flex-col items-center justify-center "
           >
             <ClipboardList className="h-8 w-8 text-green-500 mb-2" />
             <span className="text-center font-medium">Survey</span>
